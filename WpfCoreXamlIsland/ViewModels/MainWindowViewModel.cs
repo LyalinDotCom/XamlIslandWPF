@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 
-namespace WpfCoreXamlIsland.ViewModel
+namespace WpfCoreXamlIsland.ViewModels
 {
-    public class MainPageViewModel : BindableBase
+    public class MainWindowViewModel : BindableBase
     {
         private ObservableCollection<string> _randomCol = new ObservableCollection<string>();
         public ObservableCollection<string> RandomColItems
@@ -15,7 +15,7 @@ namespace WpfCoreXamlIsland.ViewModel
             set { SetProperty(ref _randomCol, value); }
         }
 
-        public MainPageViewModel()
+        public MainWindowViewModel()
         {
             _randomCol.Add("test");
         }
