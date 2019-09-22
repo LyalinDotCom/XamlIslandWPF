@@ -17,7 +17,12 @@ namespace WpfCoreXamlIsland.ViewModels
 
         public MainWindowViewModel()
         {
-            _randomCol.Add("test");
+            int length = 500;
+
+            for (int i = 0; i < length; i++)
+            {
+                _randomCol.Add("test" + i.ToString());
+            }
         }
     }
 }

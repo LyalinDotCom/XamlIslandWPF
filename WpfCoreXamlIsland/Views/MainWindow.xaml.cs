@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Windows.UI.Xaml.Data;
 
 namespace WpfCoreXamlIsland.Views
 {
@@ -34,11 +35,19 @@ namespace WpfCoreXamlIsland.Views
                 if (host.Child.GetType() == typeof(Windows.UI.Xaml.Controls.ListView))
                 {
                     var CalView = ((Windows.UI.Xaml.Controls.ListView)host.Child);
+                    CalView.DataContext = this.DataContext;
+                    var myBinding = new Windows.UI.Xaml.Data.Binding()
+                    {
+                        Path = new Windows.UI.Xaml.PropertyPath("RandomColItems")
+                    };
 
-                    CalView.Items.Add(new string("test"));
-                    CalView.Items.Add(new string("test"));
-                    CalView.Items.Add(new string("test"));
-                    CalView.Items.Add(new string("test"));
+                    Windows.UI.Xaml.Data.BindingOperations.SetBinding(CalView,
+                        Windows.UI.Xaml.Controls.ListView.ItemsSourceProperty, myBinding);
+             
+                    //CalView.Items.Add(new string("test"));
+                    //CalView.Items.Add(new string("test"));
+                    //CalView.Items.Add(new string("test"));
+                    //CalView.Items.Add(new string("test"));
                 }
             }
 
