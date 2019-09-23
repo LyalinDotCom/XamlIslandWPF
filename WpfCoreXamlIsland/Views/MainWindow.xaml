@@ -13,12 +13,17 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <ListBox ItemsSource="{Binding Path=RandomColItems}"  Grid.Row="0" Height="300" Width="600"/>
         
-        <xamlhost:WindowsXamlHost x:Name="myCalendar" InitialTypeName="Windows.UI.Xaml.Controls.ListView" 
+        <xamlhost:WindowsXamlHost x:Name="UwpListViewNative" InitialTypeName="Windows.UI.Xaml.Controls.ListView" 
           Grid.Row="1" 
-          Margin="10,10,10,10" Width="600" Height="300" ChildChanged="myCalendar_ChildChanged"  />
+          Margin="10,10,10,10" Width="600" Height="300" ChildChanged="UwpListViewNative_ChildChanged"  />
+
+        <xamlhost:WindowsXamlHost x:Name="myCustomListView" InitialTypeName="UwpControlLib.CoordinatesListView" 
+          Grid.Row="2" 
+          Margin="10,10,10,10" Width="600" Height="300" ChildChanged="myCustomListView_ChildChanged"  />
     </Grid>
 </Window>

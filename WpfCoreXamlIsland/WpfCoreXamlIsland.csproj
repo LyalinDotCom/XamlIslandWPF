@@ -12,4 +12,9 @@
     <PackageReference Include="Prism.Wpf" Version="7.2.0.1367" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UwpControlLib\UwpControlLib.csproj" />
+    <ProjectReference Include="..\UwptXamlIslandsHost\UwptXamlIslandsHost.csproj" />
+  </ItemGroup>
+
 </Project>

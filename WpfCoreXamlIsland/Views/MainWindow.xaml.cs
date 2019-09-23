@@ -26,8 +26,15 @@ namespace WpfCoreXamlIsland.Views
             InitializeComponent();
         }
 
-        private void myCalendar_ChildChanged(object sender, EventArgs e)
+        private void myCustomListView_ChildChanged(object sender, EventArgs e)
         {
+            // empty by design for now
+        }
+
+        private void UwpListViewNative_ChildChanged(object sender, EventArgs e)
+        {
+            // Example of getting binding working through code behind
+
             if (sender.GetType() == typeof(Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHost))
             {
                 var host = ((Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHost)sender);
@@ -43,14 +50,8 @@ namespace WpfCoreXamlIsland.Views
 
                     Windows.UI.Xaml.Data.BindingOperations.SetBinding(CalView,
                         Windows.UI.Xaml.Controls.ListView.ItemsSourceProperty, myBinding);
-             
-                    //CalView.Items.Add(new string("test"));
-                    //CalView.Items.Add(new string("test"));
-                    //CalView.Items.Add(new string("test"));
-                    //CalView.Items.Add(new string("test"));
                 }
             }
-
         }
     }
 }
