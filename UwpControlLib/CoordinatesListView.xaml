@@ -10,6 +10,14 @@
     d:DesignWidth="400">
 
     <Grid>
-        <ListView x:Name="coordinatesList" ItemsSource="{Binding Path=RandomColItems}" />
+        <ListView x:Name="coordinatesList" ItemsSource="{Binding Path=RandomColItems}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Red" BorderThickness="1">
+                        <TextBlock Text="{Binding Path=.}" />
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </UserControl>

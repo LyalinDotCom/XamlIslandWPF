@@ -8,7 +8,7 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -16,7 +16,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <ListBox ItemsSource="{Binding Path=RandomColItems}"  Grid.Row="0" Height="300" Width="600"/>
+        <ListBox ItemsSource="{Binding Path=RandomColItems}" Grid.Row="0" Height="300" Width="600"/>
         
         <xamlhost:WindowsXamlHost x:Name="UwpListViewNative" InitialTypeName="Windows.UI.Xaml.Controls.ListView" 
           Grid.Row="1" 
