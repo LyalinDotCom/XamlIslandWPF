@@ -39,7 +39,8 @@ namespace WpfCoreXamlIsland.Views
             {
                 var host = ((Microsoft.Toolkit.Wpf.UI.XamlHost.WindowsXamlHost)sender);
 
-                if (host.Child.GetType() == typeof(Windows.UI.Xaml.Controls.ListView))
+                if (host.Child != null &&
+                    host.Child.GetType() == typeof(Windows.UI.Xaml.Controls.ListView))
                 {
                     var CalView = ((Windows.UI.Xaml.Controls.ListView)host.Child);
                     CalView.DataContext = this.DataContext;
