@@ -13,9 +13,11 @@
         <ListView x:Name="coordinatesList" ItemsSource="{Binding Path=RandomColItems}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderBrush="Red" BorderThickness="1">
-                        <TextBlock Text="{Binding Path=.}" />
-                    </Border>
+                    <Grid>
+                        <Border BorderBrush="Red" BorderThickness="1">
+                            <TextBlock Text="{Binding}" />
+                        </Border>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

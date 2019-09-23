@@ -54,9 +54,6 @@ namespace WpfCoreXamlIsland.Views
                 }
             }
         }
-        private void myCustomListView_ChildChanged(System.Object sender, System.EventArgs e)
-        {
 
-        }
     }
 }
